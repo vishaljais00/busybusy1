@@ -8,7 +8,7 @@ import { useValue } from '../../Context';
 import { toast } from 'react-toastify';
 
 export default function Signin() {
-  const {  setSignIn, setEmail, email, password, setPassword, refID, setRefID } = useValue();
+  const {  setSignIn, setEmail, email, password, setPassword, setRefID } = useValue();
   const [resetEmail, setResetEmail] = useState('');
   const [resetPasswordSent, setResetPasswordSent] = useState(false);
   const navigate = useNavigate();

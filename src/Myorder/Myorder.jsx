@@ -7,7 +7,6 @@ import { HashLoader } from 'react-spinners';
 
 export default function Myorder() {
   const {myorder, formatTimestamp, refID, setMyOrder} = useValue();
-  const currentDate = new Date().toLocaleDateString(); // Get current date in the format "MM/DD/YYYY"
   const [loading, setLoading] = useState(true);
   useEffect(() => {
     setLoading(true)
