@@ -1,0 +1,61 @@
+.aside {
+    background: #f0f0fc;
+    border-radius: 10px;
+    left: 0;
+    padding: 1rem;
+    position: fixed;
+    text-align: center;
+    top: 30%;
+    width: 14rem;
+}
+
+.aside h2 {
+    color: #224957;
+    font-size: 1.25em;
+    font-weight: 700;
+    margin: 5px;
+}
+
+.aside .form {
+    display: block;
+    margin-top: 0em;
+}
+
+.aside .form label {
+    cursor: default;
+}
+
+.aside .filter {
+    background-color: #7064e5;
+    border-radius: 4px;
+    cursor: pointer;
+    height: 6px;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    width: 90%;
+}
+
+.aside .category {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.aside .category [type=checkbox] {
+    border-radius: 0.25rem;
+    height: 1rem;
+    margin-right: 0.5rem;
+    width: 1rem;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1051px) {
+    .aside {
+        visibility: hidden;
+    }
+
+    
+}
