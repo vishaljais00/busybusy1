@@ -2,23 +2,20 @@ import React, { useEffect, useState } from 'react'
 import Cartitem from './Cartitem'
 import "./Cart.scss";
 import { useValue } from '../../Context';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { collection, onSnapshot } from 'firebase/firestore';
 import { db } from '../../firebase';
 import { HashLoader } from 'react-spinners';
 
 
 export default function Cart() {
-  const { cartItems, setCartItems, totalAmt, setTotalAmt, setIsMyOrder,  setMyOrder, refID, makeOrder } = useValue();
+  const { cartItems, setCartItems, totalAmt, refID, makeOrder } = useValue();
   const [loading, setLoading] = useState(true);
+  const navigate = useNavigate();
 
   const handlepurchase = ()=>{
-    setIsMyOrder(true);
-    setMyOrder(cartItems);
-    setCartItems([]);
-    setTotalAmt(0); 
     makeOrder()
-
+    navigate('/myorder');
   }
 
 
